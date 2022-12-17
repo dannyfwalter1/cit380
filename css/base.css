@@ -84,6 +84,18 @@ main div {
   text-align: left;
 }
 
+/************* FITNESS FORMAT ***************/
+.page-links {
+  text-decoration: none;
+  color: #000;
+}
+
+/************* PAGE LINKS FORMAT ************/
+
+ul {
+  text-align: left;
+}
+
 /****************** FOOTER ******************/
 
 footer {
