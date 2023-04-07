@@ -10,57 +10,65 @@ header {
   background-color: #81C14B;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
   text-align: center;
   border-radius: 15px;
 }
 
-header a img, nav button {
+header a img {
   margin: 1em;
+  flex-grow: 1;
 }
 
-nav ul {
-  list-style-type: none;
+header h1 {
+  flex-grow: 4;
+}
+
+#menu {
+	display: block;
+	font-size: 2rem;
+	font-weight:700;
+	text-decoration: none;
+	padding: .5rem .75rem;
+	color: #fff;
+  flex-grow: .5;
+}
+
+#menu::before {
+	content: "≡";
+}
+
+.primaryNav {
+	list-style: none;
+	margin: 0 auto;
   padding: 0;
-  margin: 0;
 }
 
-nav button {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-  font-size: 1em;
+.primaryNav li {
+	display: none;
+}
+.primaryNav a {
+	display: block;
+	padding: 2rem;
+	text-align: left;
+	text-decoration: none;
+	color: black;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
 }
 
-nav ul li a {
-  display: block;
-  padding: .8em;
-  text-decoration: none;
-  color: #fff;
+.primaryNav a:hover, navigation a:active {
+	color: white;
+	background-color: rgba(0,0,0,0.1);
 }
 
-nav ul li a:hover {
-  background:  rgba(0,0,0,0.1);
-  border-radius: 15px;
+.show li {
+	display: block;
 }
 
-header span {
-  background-color: #2E933C;
-  color: #fff;
-  display: block;
-  padding: 1em;
-  text-align: center;
-  margin: .5em;
-  border-radius: 15px;
-}
-
-nav ul {
-  display: none;
-}
-
-nav ul.open {
-  display: block;
+#menu.show::before {
+	content: "X";
 }
 
 /******************* MAIN *******************/

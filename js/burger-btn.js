@@ -1,7 +1,7 @@
-function toggleMenu() {
-  document.getElementById("primaryNav").classList.toggle("open");
-  document.getElementById("hamburgerBtn").classList.toggle("open");
-}
+const mainnav = document.querySelector('.primaryNav')
+const hambutton = document.querySelector('#menu');
 
-const x = document.getElementById("hamburgerBtn");
-x.onclick = toggleMenu;
+hambutton.addEventListener('click', () => {
+	mainnav.classList.toggle('show');
+	hambutton.classList.toggle('show');
+});
