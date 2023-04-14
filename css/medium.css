@@ -3,17 +3,25 @@
 		max-width: 80%;
 		margin: 0 auto;
 	}
-
-    .navigation {
-		display: flex;
-	}
-	.navigation li {
-		display: block; /* change state in small view */
-	}
-	.navigation a {
-		text-align: center;
-	}
 	#menu {
 		display: none;
+	}
+
+	nav {
+        line-height: 3em;
+        text-align: center;
+        font-size: 1.2em;
+        grid-column: 4/6;
+        grid-row: 1/2;
+        border: none;
+        margin-right: 1em;
+    }
+
+
+    nav ul {
+        display: block;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+        margin: 0;
 	}
 }
